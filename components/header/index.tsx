@@ -38,7 +38,7 @@ const arrContact = [
 
 export default function Header() {
   return (
-    <header className="flex justify-between items-center">
+    <header className="flex justify-between items-center mb-20 pl-44 pr-44 pt-28">
       <img src="30X40_LOGO_SQUARESPACE.png" alt="" className="h-24" />
       <nav>
         <ul className="flex gap-7">
