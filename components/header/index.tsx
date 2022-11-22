@@ -1,21 +1,38 @@
-import { useState } from "react";
 import MenuDropDownItem from "./menu-dropdown/item";
 
 const arrShop = [
   {
-    title: "A",
+    title: "Drawing Templates",
   },
   {
-    title: "B",
+    title: "Procreate Brushes",
+  },
+  {
+    title: "A+E Course",
+  },
+  {
+    title: "BLANK sketchbook",
+  },
+  {
+    title: "Trace Sketchbook",
+  },
+  {
+    title: "Books",
+  },
+  {
+    title: "Merch",
+  },
+  {
+    title: "Gift Guide",
   },
 ];
 
-const arrBlog = [
+const arrContact = [
   {
-    title: "C",
+    title: "Questions + FAQ",
   },
   {
-    title: "D",
+    title: "Contact",
   },
 ];
 
@@ -26,7 +43,7 @@ export default function Header() {
       <nav>
         <ul className="flex gap-7">
           <MenuDropDownItem title={"Blog"} menuItens={arrShop} />
-          <MenuDropDownItem title={"Learn"} menuItens={arrBlog} />
+          <MenuDropDownItem title={"Contact"} menuItens={arrContact} />
         </ul>
       </nav>
     </header>

@@ -10,9 +10,9 @@ interface IMenuDropDown {
 export default function MenuDropDown(props: IMenuDropDown) {
   const { show, itens } = props;
   return (
-    <ul className={show ? "block" : "hidden"}>
+    <ul className={show ? "block fixed pt-2" : "hidden"}>
       {itens.map((item) => (
-        <li>{item.title}</li>
+        <li className="uppercase text-link-menu cursor-pointer hover:text-link-hover">{item.title}</li>
       ))}
     </ul>
   );
