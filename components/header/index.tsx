@@ -1,40 +1,61 @@
 import MenuDropDownItem from "./menu-dropdown/item";
 
-const arrShop = [
-  {
-    title: "Drawing Templates",
-  },
-  {
-    title: "Procreate Brushes",
-  },
-  {
-    title: "A+E Course",
-  },
-  {
-    title: "BLANK sketchbook",
-  },
-  {
-    title: "Trace Sketchbook",
-  },
-  {
-    title: "Books",
-  },
-  {
-    title: "Merch",
-  },
-  {
-    title: "Gift Guide",
-  },
-];
+const arrShop = {
+  title: "Shop",
+  link: "shop",
+  dropDown: [
+    {
+      title: "Drawing Templates",
+      link: "shop/drawing-templates",
+    },
+    {
+      title: "Procreate Brushes",
+      link: "shop/procreate-brushes",
+    },
+    {
+      title: "A+E Course",
+      link: "shop/a-e-course",
+    },
+    {
+      title: "BLANK sketchbook",
+      link: "blank-sketchbook",
+    },
+    {
+      title: "Trace Sketchbook",
+      link: "trace-sketchbook",
+    },
+    {
+      title: "Books",
+      link: "books",
+    },
+    {
+      title: "Merch",
+      link: "merch",
+    },
+    {
+      title: "Gift Guide",
+      link: "gift-guide",
+    },
+  ],
+};
 
-const arrContact = [
-  {
-    title: "Questions + FAQ",
-  },
-  {
-    title: "Contact",
-  },
-];
+const arrContact = {
+  title: "Contact",
+  link: "contact",
+  dropDown: [
+    {
+      title: "Questions + FAQ",
+    },
+    {
+      title: "Contact",
+    },
+  ],
+};
+
+const arrLearn = {
+  title: "Learn",
+  link: "learn",
+};
 
 export default function Header() {
   return (
@@ -42,8 +63,17 @@ export default function Header() {
       <img src="30X40_LOGO_SQUARESPACE.png" alt="" className="h-24" />
       <nav>
         <ul className="flex gap-7">
-          <MenuDropDownItem title={"Blog"} menuItens={arrShop} />
-          <MenuDropDownItem title={"Contact"} menuItens={arrContact} />
+          <MenuDropDownItem
+            title={arrShop.title}
+            link={arrShop.link}
+            menuItens={arrShop.dropDown}
+          />
+          <MenuDropDownItem title={arrLearn.title} link={arrLearn.link} />
+          <MenuDropDownItem
+            title={arrContact.title}
+            link={arrContact.link}
+            menuItens={arrContact.dropDown}
+          />
         </ul>
       </nav>
     </header>

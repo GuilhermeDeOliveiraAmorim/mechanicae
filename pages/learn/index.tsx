@@ -23,22 +23,22 @@ const arrCards: ICard[] = [
     id: 1,
     picture: "design-meet-revise-repeat-thumbnail.jpg",
     title: "COURSES",
-    button: <Button link="#" title="Learn More" />,
-    link: "#",
+    button: <Button link="courses" title="Learn More" />,
+    link: "courses",
   },
   {
     id: 2,
     picture: "remote-working-igtv2.jpg",
     title: "RESOURCES",
-    button: <Button link="#" title="Learn More" />,
-    link: "#",
+    button: <Button link="resources" title="Learn More" />,
+    link: "resources",
   },
   {
     id: 3,
     picture: "overhead-cam-thumb.jpg",
     title: "VIDEOS",
-    button: <Button link="#" title="Learn More" />,
-    link: "#",
+    button: <Button link="videos" title="Learn More" />,
+    link: "videos",
   },
 ];
 

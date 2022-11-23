@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState } from "react";
 import MenuDropDown from "..";
 
@@ -7,23 +8,26 @@ interface IItem {
 
 interface IMenuDropDownItem {
   title: string;
-  menuItens: IItem[];
+  link: string;
+  menuItens?: IItem[] | undefined;
 }
 
 export default function MenuDropDownItem(props: IMenuDropDownItem) {
-  const { title, menuItens } = props;
+  const { title, link, menuItens } = props;
   const [showMenuDropDown, setShowMenuDropDown] = useState(false);
   function menuDropDown(show: boolean) {
     setShowMenuDropDown(show);
   }
   return (
-    <li
-      className="uppercase text-link-menu cursor-pointer hover:text-link-hover"
-      onMouseOver={() => menuDropDown(true)}
-      onMouseLeave={() => menuDropDown(false)}
-    >
-      {title}
-      <MenuDropDown show={showMenuDropDown} itens={menuItens} />
-    </li>
+    <Link href={link}>
+      <li
+        className="uppercase text-link-menu cursor-pointer hover:text-link-hover"
+        onMouseOver={() => menuDropDown(true)}
+        onMouseLeave={() => menuDropDown(false)}
+      >
+        {title}
+        <MenuDropDown show={showMenuDropDown} itens={menuItens} />
+      </li>
+    </Link>
   );
 }

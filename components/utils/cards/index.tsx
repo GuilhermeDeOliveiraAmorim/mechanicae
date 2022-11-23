@@ -1,10 +1,10 @@
-import Button from "../button";
 import Card from "./card";
 
 interface ICard {
   picture: string;
   title: string;
   button: JSX.Element;
+  link: string;
 }
 
 interface ICards {
@@ -16,7 +16,13 @@ export default function Cards(props: ICards) {
   return (
     <div className="flex gap-4 pt-4">
       {cards.map((card) => (
-        <Card title={card.title} picture={card.picture} button={card.button} />
+        <Card
+          key={card.title}
+          title={card.title}
+          picture={card.picture}
+          button={card.button}
+          link={card.link}
+        />
       ))}
     </div>
   );

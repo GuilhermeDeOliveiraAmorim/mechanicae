@@ -4,15 +4,20 @@ interface IItem {
 
 interface IMenuDropDown {
   show: boolean;
-  itens: IItem[];
+  itens?: IItem[];
 }
 
 export default function MenuDropDown(props: IMenuDropDown) {
   const { show, itens } = props;
   return (
-    <ul className={show ? "block fixed pt-2" : "hidden"}>
-      {itens.map((item) => (
-        <li className="uppercase text-link-menu cursor-pointer hover:text-link-hover">{item.title}</li>
+    <ul className={show ? "block absolute pt-2" : "hidden"}>
+      {itens?.map((item) => (
+        <li
+          key={item.title}
+          className="uppercase text-sm text-link-menu cursor-pointer hover:text-link-hover"
+        >
+          {item.title}
+        </li>
       ))}
     </ul>
   );
