@@ -1,4 +1,3 @@
-import Link from "next/link";
 import MostPopularItem from "./most-popular-item";
 
 interface IMostPopularItem {
