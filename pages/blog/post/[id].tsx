@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { posts } from "../../../data";
 import Label from "../../../components/utils/label";
+import Link from "next/link";
 
 interface IPost {
   userId: number;
@@ -42,19 +43,25 @@ export default function Post() {
 
   return (
     <div key={post?.id}>
-      <h1>{post?.title}</h1>
-      <span>{today.toUTCString()}</span>
-      <p>{post?.body}</p>
+      <Link href={"#"}>
+        <h1 className="text-[#222222] font-medium text-2xl uppercase pb-4">
+          {post?.title}
+        </h1>
+      </Link>
+      <p className="text-sm text-[#b3b3b3] pb-4">{today.toUTCString()}</p>
+      <p className="whitespace-pre-wrap break-words font-normal text-sm">
+        {post?.body}
+      </p>
       <span>
         categories:{" "}
-        {categories.map((tag) => (
-          <Label title={tag.title} />
+        {categories.map((category) => (
+          <Label key={category.title} title={category.title} />
         ))}
       </span>
       <span>
         tags:
         {tags.map((tag) => (
-          <Label title={tag.title} />
+          <Label key={tag.title} title={tag.title} />
         ))}
       </span>
     </div>
