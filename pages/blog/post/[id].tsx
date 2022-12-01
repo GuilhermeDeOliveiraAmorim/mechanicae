@@ -1,12 +1,39 @@
 import { useRouter } from "next/router";
-import { posts } from "../../../data";
+import { useEffect, useState } from "react";
+import { IPost } from "../../../interfaces/IPost";
 import Label from "../../../components/utils/label";
 import Link from "next/link";
+import axios from "axios";
 
-interface IPost {
-  userId: number;
+interface IUser {
   id: number;
-  title: string;
+  name: string;
+  username: string;
+  email: string;
+  address: {
+    street: string;
+    suite: string;
+    city: string;
+    zipcode: number;
+    geo: {
+      lat: number;
+      lng: number;
+    };
+  };
+  phone: string;
+  website: string;
+  company: {
+    name: string;
+    catchPhrase: string;
+    bs: string;
+  };
+}
+
+interface IComment {
+  postId: number;
+  id: number;
+  name: string;
+  email: string;
   body: string;
 }
 
@@ -24,19 +51,22 @@ const categories = [
   { title: "expedita" },
 ];
 
-export default function Post() {
+export default function Post(props: IPost) {
   const router = useRouter();
   const { id } = router.query;
 
-  var idPost = 0;
+  const [post, setPost] = useState<IPost>();
 
-  if (typeof id === "string") {
-    idPost = parseInt(id);
-  }
-
-  const postFiltered = posts.filter((post) => post.id === idPost);
-  const post = postFiltered[0];
-  console.log(post);
+  useEffect(() => {
+    if (!id) {
+      return;
+    }
+    const fetchPost = async () => {
+      const response = await axios.get(`http://localhost:8000/posts/${id}`);
+      setPost(response.data);
+    };
+    fetchPost();
+  }, [post]);
 
   const timeElapsed = Date.now();
   const today = new Date(timeElapsed);
@@ -53,7 +83,6 @@ export default function Post() {
         {post?.body}
       </p>
       <span>
-        categories:{" "}
         {categories.map((category) => (
           <Label key={category.title} title={category.title} />
         ))}

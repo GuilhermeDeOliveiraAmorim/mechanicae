@@ -1,17 +1,13 @@
+import { IMostPopular } from "../../interfaces/IMostPopular";
+import { GetServerSideProps } from "next";
+import axios from "axios";
 import MostPopular from "../../components/blog/most-popular";
 import Header from "../../components/header";
+import Hr from "../../components/utils/hr";
 import Title from "../../components/utils/title";
 
-const mostPopular = [
-  { title: "Updating my Workspace", link: "updating-my-Workspace" },
-  { title: "Architect’s DIY Kitchen Remodel", link: "longhouse-kitchen" },
-  {
-    title: "Sketching In Isolation - Work From Home Skill Building",
-    link: "sketching-in-isolation",
-  },
-];
-
-export default function Blog() {
+export default function Blog(props: IMostPopular) {
+  const { mostPopular } = props;
   return (
     <div>
       <Header />
@@ -25,8 +21,18 @@ export default function Blog() {
             Start with one of our most popular posts…
           </p>
           <MostPopular items={mostPopular} />
+          <Hr />
         </div>
       </div>
     </div>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const { data } = await axios.get("http://localhost:8000/most-popular");
+  return {
+    props: {
+      mostPopular: data,
+    },
+  };
+};

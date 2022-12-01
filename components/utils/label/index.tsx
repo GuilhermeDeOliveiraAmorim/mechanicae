@@ -3,5 +3,5 @@ interface ILabel {
 }
 export default function Label(props: ILabel) {
   const { title } = props;
-  return <span>{title}</span>;
+  return <span className="p-2">{title}</span>;
 }
