@@ -11,7 +11,11 @@ export default function Home(props: ICoverDescription) {
     <div>
       <Header />
       <div className="pl-44 pr-44 pb-28">
-        <Title title={coverDescription.titleSite} size="3xl" />
+        <Title
+          title={coverDescription.titleSite}
+          textSize="text-3xl"
+          textAlign="text-center"
+        />
         <Cover
           titleSite={coverDescription.titleSite}
           picture={coverDescription.picture}
