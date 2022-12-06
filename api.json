@@ -1,4 +1,27 @@
 {
+  "about": {
+    "name": "Eric Reinholdt",
+    "degree": "NCARB, Maine Licensed Architect",
+    "picture": "https://images.squarespace-cdn.com/content/v1/58b58a96f5e231aa75f48ec4/4b1b6b3a-3070-4c26-b048-f894ded7a739/ewr-headshot-may2022-final.jpg",
+    "text": [
+      {
+        "id": 1,
+        "p": "30X40 Design Workshop LLC, designs simple, modern homes, that reflect your lifestyle and your site’s unique conditions. Founded in 2013, by award-winning architect Eric Reinholdt, 30X40’s design process is idea-driven + collaborative and the work celebrates fine craftsmanship + detail. Eric employs a minimalist, Shaker-like material palette inspired by the local context - climate, light, and natural surroundings - informed by the patterns of your lifestyle + tastes."
+      },
+      {
+        "id": 2,
+        "p": "Headquartered at the Long Studio overlooking Acadia National Park on Mount Desert Island, Maine, the studio serves as an avatar of Eric’s design principles, a showcase of the latest in building science and a backdrop for the most popular architecture-focused YouTube channel online."
+      },
+      {
+        "id": 3,
+        "p": "Eric received his Bachelor of Architecture degree from Roger Williams University in 1996, graduating with high honors and the Independent Architecture Project Thesis Award. Eric is a licensed Architect in Maine and NCARB certified, eligible for reciprocity in all US jurisdictions."
+      },
+      {
+        "id": 4,
+        "p": "He is widely known for creating the 30X40 Design Workshop YouTube channel, where he makes videos about architecture, designs simple modern homes + openly shares his process online. The videos are used as curriculum in architecture schools, and by students + professionals worldwide."
+      }
+    ]
+  },
   "cover-description": {
     "titleSite": "SIMPLE. MODERN. RESIDENTIAL ARCHITECTURE.",
     "picture": "https://images.squarespace-cdn.com/content/v1/58b58a96f5e231aa75f48ec4/48d24486-1bb6-4c39-afdb-13dfdec6c9e7/Squid-Cove-West-Elevation-Dusk.jpg",

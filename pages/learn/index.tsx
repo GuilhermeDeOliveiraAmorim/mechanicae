@@ -47,7 +47,7 @@ export default function Learn() {
     <div>
       <Header />
       <div className="pl-44 pr-44 pb-28">
-        <Title title="Learn" size="3xl" />
+        <Title title="Learn" textSize="text-3xl" textAlign="text-center" />
         <Subtitle subtitle="Choose a topic below to see our curated resources: videos, downloadable worksheets, guides and courses." />
         <Cards cards={arrCards} />
       </div>

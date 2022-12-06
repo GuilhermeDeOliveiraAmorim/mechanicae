@@ -63,6 +63,11 @@ const arrBlog = {
   link: "blog",
 };
 
+const arrAbout = {
+  title: "About",
+  link: "about",
+};
+
 const arrPortfolio = {
   title: "Portfolio",
   link: "portfolio",
@@ -90,6 +95,8 @@ export default function Header() {
             link={arrShop.link}
             menuItens={arrShop.dropDown}
           />
+
+          <MenuDropDownItem title={arrAbout.title} link={arrAbout.link} />
 
           <MenuDropDownItem
             title={arrContact.title}

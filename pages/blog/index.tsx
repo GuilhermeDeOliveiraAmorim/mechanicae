@@ -12,7 +12,6 @@ export default function Blog(props: IMostPopular) {
     <div>
       <Header />
       <div className="pl-44 pr-44 pb-28">
-        <Title title="" size="3xl" />
         <div>
           <h1 className="uppercase text-[#222222] text-base font-bold mb-4">
             New Here?
