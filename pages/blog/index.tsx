@@ -6,6 +6,7 @@ import Header from "../../components/header";
 import Hr from "../../components/utils/hr";
 import Title from "../../components/utils/title";
 import Footer from "../../components/footer";
+import BlogList from "../../components/blog/list";
 
 export default function Blog(props: IMostPopular) {
   const { mostPopular } = props;
@@ -22,6 +23,12 @@ export default function Blog(props: IMostPopular) {
           </p>
           <MostPopular items={mostPopular} />
           <Hr />
+          <div className="grid grid-cols-4 pt-[80px] gap-4">
+            <div className="col-span-3">
+              <BlogList />
+            </div>
+            <div className="col-span-1">Aside</div>
+          </div>
         </div>
       </div>
       <Footer />
