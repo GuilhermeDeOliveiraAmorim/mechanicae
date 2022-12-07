@@ -3,6 +3,7 @@ import { GetServerSideProps } from "next";
 import axios from "axios";
 import Header from "../../components/header";
 import Title from "../../components/utils/title";
+import Footer from "../../components/footer";
 
 export default function About(props: IAbout) {
   const { about } = props;
@@ -34,6 +35,7 @@ export default function About(props: IAbout) {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

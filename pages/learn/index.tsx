@@ -3,6 +3,7 @@ import Button from "../../components/utils/button";
 import Subtitle from "../../components/utils/subtitle";
 import Title from "../../components/utils/title";
 import Cards from "../../components/utils/cards";
+import Footer from "../../components/footer";
 
 interface ICard {
   id: number;
@@ -51,6 +52,7 @@ export default function Learn() {
         <Subtitle subtitle="Choose a topic below to see our curated resources: videos, downloadable worksheets, guides and courses." />
         <Cards cards={arrCards} />
       </div>
+      <Footer />
     </div>
   );
 }

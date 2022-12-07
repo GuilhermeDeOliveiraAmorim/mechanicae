@@ -1,4 +1,16 @@
 {
+  "footer": {
+    "title": "© 30X40 Design Workshop LLC",
+    "policy": {
+      "title": "Privacy Policy",
+      "link": "#"
+    }
+  },
+  "social-networking": [
+    { "id": 1, "name": "Linkedin", "link": "#" },
+    { "id": 2, "name": "Instagram", "link": "#" },
+    { "id": 3, "name": "YouTube", "link": "#" }
+  ],
   "about": {
     "name": "Eric Reinholdt",
     "degree": "NCARB, Maine Licensed Architect",

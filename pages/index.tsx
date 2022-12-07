@@ -4,6 +4,7 @@ import Header from "../components/header";
 import Cover from "../components/main/cover";
 import Title from "../components/utils/title";
 import axios from "axios";
+import Footer from "../components/footer";
 
 export default function Home(props: ICoverDescription) {
   const { coverDescription } = props;
@@ -24,6 +25,7 @@ export default function Home(props: ICoverDescription) {
           tags={coverDescription.tags}
         />
       </div>
+      <Footer />
     </div>
   );
 }

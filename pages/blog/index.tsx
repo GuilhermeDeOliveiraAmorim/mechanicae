@@ -5,6 +5,7 @@ import MostPopular from "../../components/blog/most-popular";
 import Header from "../../components/header";
 import Hr from "../../components/utils/hr";
 import Title from "../../components/utils/title";
+import Footer from "../../components/footer";
 
 export default function Blog(props: IMostPopular) {
   const { mostPopular } = props;
@@ -23,6 +24,7 @@ export default function Blog(props: IMostPopular) {
           <Hr />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
