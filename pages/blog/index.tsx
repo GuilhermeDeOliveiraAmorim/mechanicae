@@ -7,6 +7,8 @@ import Hr from "../../components/utils/hr";
 import Title from "../../components/utils/title";
 import Footer from "../../components/footer";
 import BlogList from "../../components/blog/list";
+import Link from "next/link";
+import AsideBlog from "../../components/blog/aside";
 
 export default function Blog(props: IMostPopular) {
   const { mostPopular } = props;
@@ -27,7 +29,9 @@ export default function Blog(props: IMostPopular) {
             <div className="col-span-3">
               <BlogList />
             </div>
-            <div className="col-span-1">Aside</div>
+            <div className="col-span-1">
+              <AsideBlog />
+            </div>
           </div>
         </div>
       </div>
