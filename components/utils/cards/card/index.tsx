@@ -1,12 +1,7 @@
 import Link from "next/link";
+import { ICard } from "../../../../interfaces/ICard";
+import Button from "../../button";
 import Title from "../../title";
-
-interface ICard {
-  picture: string;
-  title: string;
-  button: JSX.Element;
-  link: string;
-}
 
 export default function Card(props: ICard) {
   const { picture, title, button, link } = props;
@@ -19,9 +14,11 @@ export default function Card(props: ICard) {
         ></div>
       </Link>
       <div className="pt-4 pb-4">
-        <Title title={title} size="2xl" />
+        <Title title={title} textSize="2xl" textAlign="" />
       </div>
-      <div className="flex justify-center">{button}</div>
+      <div className="flex justify-center">
+        <Button link={button.link} title={button.title} />
+      </div>
     </div>
   );
 }
