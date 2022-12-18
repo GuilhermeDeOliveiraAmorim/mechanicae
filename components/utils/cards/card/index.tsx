@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { ICard } from "../../../../interfaces/ICard";
+import Link from "next/link";
 import Button from "../../button";
 import Title from "../../title";
 import Subtitle from "../../subtitle";

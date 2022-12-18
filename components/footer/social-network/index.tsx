@@ -15,8 +15,6 @@ export default function SocialNetworking() {
       });
   }, []);
 
-  console.log(socialNetworking);
-
   return (
     <div className="flex justify-center align-middle items-center gap-4">
       <Link href="#" className="p-2 bg-[#222222] hover:bg-gray-600">
