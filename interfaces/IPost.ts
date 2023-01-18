@@ -1,3 +1,5 @@
+import { ITag } from "./ITag";
+
 export interface IPost {
   body: string;
   comments: {
@@ -15,4 +17,5 @@ export interface IPost {
     id: number;
   };
   userId: number;
+  tags: ITag[];
 }
