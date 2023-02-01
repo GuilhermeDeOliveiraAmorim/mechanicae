@@ -10,6 +10,7 @@ export default function Cards(props: ICards) {
           id={card.id}
           key={card.title}
           title={card.title}
+          subtitle={card.subtitle}
           picture={card.picture}
           button={card.button}
           link={card.link}

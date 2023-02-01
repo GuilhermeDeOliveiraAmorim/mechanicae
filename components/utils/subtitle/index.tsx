@@ -1,5 +1,5 @@
 interface ISubtitle {
-  subtitle: string;
+  subtitle?: string;
 }
 
 export default function Subtitle(props: ISubtitle) {

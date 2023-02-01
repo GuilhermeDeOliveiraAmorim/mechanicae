@@ -1,10 +1,11 @@
 export interface ICard {
-  id: number;
-  picture: string;
-  title: string;
-  button: {
-    link: string;
+    id: number;
+    picture: string;
     title: string;
-  };
-  link: string;
+    subtitle?: string;
+    button: {
+        link: string;
+        title: string;
+    };
+    link: string;
 }
